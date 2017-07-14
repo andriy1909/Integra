@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B0B5ECB-F7B9-4666-9D82-01688CD1F90C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ABShell</RootNamespace>
+    <AssemblyName>Integra</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>ftp://46.63.62.89/Integra/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <MinimumRequiredVersion>1.0.2.0</MinimumRequiredVersion>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.3.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>shellscript_3969.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CF59FEF1BC327349CEB33B134C4FBACF32494AC4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ABShell_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ABShell.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autorization.Designer.cs">
+      <DependentUpon>Autorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonApp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ButtonApp.Designer.cs">
+      <DependentUpon>ButtonApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ButtonNew.Designer.cs">
+      <DependentUpon>ButtonNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBox2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CheckBox2.Designer.cs">
+      <DependentUpon>CheckBox2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBox3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CheckBox3.Designer.cs">
+      <DependentUpon>CheckBox3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserSetting.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reboot.cs" />
+    <Compile Include="SettingBut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingBut.Designer.cs">
+      <DependentUpon>SettingBut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="UserButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserButton.Designer.cs">
+      <DependentUpon>UserButton.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Autorization.resx">
+      <DependentUpon>Autorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButtonApp.resx">
+      <DependentUpon>ButtonApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButtonNew.resx">
+      <DependentUpon>ButtonNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBox2.resx">
+      <DependentUpon>CheckBox2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckBox3.resx">
+      <DependentUpon>CheckBox3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingBut.resx">
+      <DependentUpon>SettingBut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserButton.resx">
+      <DependentUpon>UserButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\settings_5054.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\microsoftoffice2003excel_7420.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\ab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\microsoftoffice2007excel_8537.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\windowslogoff_2434.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\windowsrestart_6112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\windowsturnoff_9317.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\yahoowidgetengine_3827.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\microsoftofficeword_8198.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\microsoftoffice2007word_5551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\aboffice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\button_cancel_6758.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\button_ok_1908.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\apply_3742.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\box_grey_1252.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\TeamViewer02x128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\package_network_1600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\Chrome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\shutdown2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\logoff-64_4700.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\desktop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\program_3090.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\plainicon.com-49216-128px-2dd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\cleanSett.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\taskmgr-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\desktop2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\redLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\complife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\Application.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\cb1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\cb2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resourse\fonts_4265.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.bmp" />
+    <None Include="Resourse\add1-_4151.png" />
+    <None Include="Resourse\add1-_41512.png" />
+    <None Include="Resourse\edittrash_7432.png" />
+    <None Include="Resourse\plainicon2.png" />
+    <None Include="Resourse\add_1078.png" />
+    <None Include="Resourse\application-x-font-afm_5280.png" />
+    <None Include="Resourse\1469443202_preview_onoff.png" />
+    <None Include="Resourse\login-02-3-3-2.png" />
+    <None Include="Resourse\reload_03.png" />
+    <None Include="Resourse\power_01.png" />
+    <None Include="Resourse\settings.png" />
+    <None Include="Resources\off.png" />
+    <None Include="Resources\system.png" />
+    <None Include="Resources\TeamViewer.png" />
+    <None Include="Resourse\cb21.png" />
+    <None Include="Resources\27-128.png" />
+    <None Include="Resources\accept-icon-47801.png" />
+    <None Include="Resources\experimentsfolder_8215.png" />
+    <None Include="Resources\no_photo.png" />
+    <None Include="Resources\TeamViewerExe.bmp" />
+    <None Include="Resourse\login-02_2.png" />
+    <None Include="Resourse\power_01_2.png" />
+    <None Include="Resourse\reload_03_2.png" />
+    <Content Include="shellscript_3969.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
