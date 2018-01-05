@@ -97,7 +97,7 @@ namespace ABShell
                         programsList = (List<ProgramSetting>)formatter.Deserialize(fStream);
                     }
                 }
-                if (programsList.Count < 5)
+                if (programsList.Count < 6)
                 {
                     programsList.Clear();
                     programsList.Add(new ProgramSetting()
@@ -129,6 +129,13 @@ namespace ABShell
                     {
                         id = 99,
                         name = "yes"
+                    });
+                    programsList.Add(new ProgramSetting()
+                    {
+                        id = 91,
+                        path = @"C:\Windows\System32\osk.exe",
+                        name = "Клавиатура",
+                        isVisible = true
                     });
                 }
                 btnABOffice = loadButton(programsList.Find(x => x.id == 100), btnABOffice);
@@ -810,6 +817,12 @@ namespace ABShell
             {
                 MessageBox.Show(err.Message);
             }
-        }        
+        }
+
+        private void btAppWiFi_Click(object sender, EventArgs e)
+        {
+            WiFiListForm form = new WiFiListForm();
+            form.ShowDialog();
+        }
     }
 }
