@@ -2,6 +2,6 @@
 {
     internal class WiFiNetwork
     {
-        public object[] Name { get; internal set; }
+        public string Name { get; set; }
     }
 }

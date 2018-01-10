@@ -415,8 +415,8 @@ namespace ABShell
                     tmp.Click += button_Click;
                     if (isSetting || item.isVisible)
                     {
-                        tmp.Left = (i % 7) * 76 + 3;
-                        tmp.Top = i / 7 * 93 + 3;
+                        tmp.Left = (i % 8) * 76 + 3;
+                        tmp.Top = i / 8 * 93 + 3;
                         pnContents.Controls.Add(tmp);
                         i++;
                     }
@@ -429,8 +429,8 @@ namespace ABShell
                     add.Height = 51;
                     add.Top = 20;
                     hint.SetToolTip(add, "Добавить кнопку");
-                    add.Left = (i % 7) * 76 + 14;
-                    add.Top = i / 7 * 93 + 14;
+                    add.Left = (i % 8) * 76 + 14;
+                    add.Top = i / 8 * 93 + 14;
                     add.BackgroundImage = Properties.Resources.add_1078;
                     add.BackgroundImageLayout = ImageLayout.Stretch;
                     add.FlatStyle = FlatStyle.Flat;
@@ -438,14 +438,14 @@ namespace ABShell
                     add.Click += addBut_Click;
                     add.Visible = isSetting;
                     pnContents.Controls.Add(add);
-                    Height = max + i / 7 * 93;
+                    Height = max + i / 8 * 93;
                     btnLogout.Enabled = true;
                     btnPowerOff.Enabled = true;
                     btnRestart.Enabled = true;
                 }
                 else
                 {
-                    Height = min + (i - 1) / 7 * 93;
+                    Height = min + (i - 1) / 8 * 93;
                     setButtonEnable(btnLogout);
                     setButtonEnable(btnPowerOff);
                     setButtonEnable(btnRestart);

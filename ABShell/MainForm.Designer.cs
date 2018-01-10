@@ -36,6 +36,10 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnStandart = new System.Windows.Forms.Panel();
+            this.btnTeamViewer = new ABShell.ButtonApp();
+            this.btAppWiFi = new ABShell.ButtonApp();
+            this.btnDescktop = new ABShell.ButtonApp();
+            this.btnPrinters = new ABShell.ButtonApp();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
             this.btnPowerOff = new System.Windows.Forms.Button();
@@ -43,6 +47,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnContents = new System.Windows.Forms.Panel();
+            this.btn = new ABShell.UserButton();
+            this.btnABOffice = new ABShell.UserButton();
             this.addBut = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,6 +57,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cbUseShell = new ABShell.CheckBox2();
+            this.cbUseDisp = new ABShell.CheckBox2();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -62,14 +70,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.cbUseShell = new ABShell.CheckBox2();
-            this.cbUseDisp = new ABShell.CheckBox2();
-            this.btn = new ABShell.UserButton();
-            this.btnABOffice = new ABShell.UserButton();
-            this.btnTeamViewer = new ABShell.ButtonApp();
-            this.btAppWiFi = new ABShell.ButtonApp();
-            this.btnDescktop = new ABShell.ButtonApp();
-            this.btnPrinters = new ABShell.ButtonApp();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.pnHead.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +85,7 @@
             // 
             // pnHead
             // 
+            this.pnHead.Controls.Add(this.panel7);
             this.pnHead.Controls.Add(this.lbCheat);
             this.pnHead.Controls.Add(this.panel1);
             this.pnHead.Controls.Add(this.pictureBox1);
@@ -97,7 +99,7 @@
             // 
             this.lbCheat.Location = new System.Drawing.Point(25, 33);
             this.lbCheat.Name = "lbCheat";
-            this.lbCheat.Size = new System.Drawing.Size(12, 13);
+            this.lbCheat.Size = new System.Drawing.Size(13, 14);
             this.lbCheat.TabIndex = 64;
             this.lbCheat.Click += new System.EventHandler(this.lbCheat_Click);
             // 
@@ -169,6 +171,86 @@
             this.pnStandart.Name = "pnStandart";
             this.pnStandart.Size = new System.Drawing.Size(612, 79);
             this.pnStandart.TabIndex = 32;
+            // 
+            // btnTeamViewer
+            // 
+            this.btnTeamViewer.BackgroundImage = global::ABShell.Properties.Resources.TeamViewer;
+            this.btnTeamViewer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTeamViewer.FlatAppearance.BorderSize = 0;
+            this.btnTeamViewer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeamViewer.id = 95;
+            this.btnTeamViewer.image = global::ABShell.Properties.Resources.TeamViewer;
+            this.btnTeamViewer.isVisible = false;
+            this.btnTeamViewer.Location = new System.Drawing.Point(232, 3);
+            this.btnTeamViewer.login = "";
+            this.btnTeamViewer.Name = "btnTeamViewer";
+            this.btnTeamViewer.password = "";
+            this.btnTeamViewer.path = "";
+            this.btnTeamViewer.server = "";
+            this.btnTeamViewer.Size = new System.Drawing.Size(70, 70);
+            this.btnTeamViewer.TabIndex = 95;
+            this.btnTeamViewer.UseVisualStyleBackColor = true;
+            this.btnTeamViewer.Click += new System.EventHandler(this.button_Click);
+            // 
+            // btAppWiFi
+            // 
+            this.btAppWiFi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btAppWiFi.BackgroundImage")));
+            this.btAppWiFi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btAppWiFi.FlatAppearance.BorderSize = 0;
+            this.btAppWiFi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAppWiFi.id = 5;
+            this.btAppWiFi.image = ((System.Drawing.Image)(resources.GetObject("btAppWiFi.image")));
+            this.btAppWiFi.isVisible = false;
+            this.btAppWiFi.Location = new System.Drawing.Point(4, 3);
+            this.btAppWiFi.login = "";
+            this.btAppWiFi.Name = "btAppWiFi";
+            this.btAppWiFi.password = "";
+            this.btAppWiFi.path = "explorer";
+            this.btAppWiFi.server = "";
+            this.btAppWiFi.Size = new System.Drawing.Size(70, 70);
+            this.btAppWiFi.TabIndex = 92;
+            this.btAppWiFi.UseVisualStyleBackColor = true;
+            this.btAppWiFi.Click += new System.EventHandler(this.btAppWiFi_Click);
+            // 
+            // btnDescktop
+            // 
+            this.btnDescktop.BackgroundImage = global::ABShell.Properties.Resources.system;
+            this.btnDescktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDescktop.FlatAppearance.BorderSize = 0;
+            this.btnDescktop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDescktop.id = 5;
+            this.btnDescktop.image = global::ABShell.Properties.Resources.system;
+            this.btnDescktop.isVisible = false;
+            this.btnDescktop.Location = new System.Drawing.Point(80, 3);
+            this.btnDescktop.login = "";
+            this.btnDescktop.Name = "btnDescktop";
+            this.btnDescktop.password = "";
+            this.btnDescktop.path = "explorer";
+            this.btnDescktop.server = "";
+            this.btnDescktop.Size = new System.Drawing.Size(70, 70);
+            this.btnDescktop.TabIndex = 93;
+            this.btnDescktop.UseVisualStyleBackColor = true;
+            this.btnDescktop.Click += new System.EventHandler(this.btnDescktop_Click);
+            // 
+            // btnPrinters
+            // 
+            this.btnPrinters.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrinters.BackgroundImage")));
+            this.btnPrinters.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrinters.FlatAppearance.BorderSize = 0;
+            this.btnPrinters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrinters.id = 5;
+            this.btnPrinters.image = ((System.Drawing.Image)(resources.GetObject("btnPrinters.image")));
+            this.btnPrinters.isVisible = false;
+            this.btnPrinters.Location = new System.Drawing.Point(156, 3);
+            this.btnPrinters.login = "";
+            this.btnPrinters.Name = "btnPrinters";
+            this.btnPrinters.password = "";
+            this.btnPrinters.path = "control printers";
+            this.btnPrinters.server = "";
+            this.btnPrinters.Size = new System.Drawing.Size(70, 70);
+            this.btnPrinters.TabIndex = 94;
+            this.btnPrinters.UseVisualStyleBackColor = true;
+            this.btnPrinters.Click += new System.EventHandler(this.btnPrinters_Click);
             // 
             // btnSetting
             // 
@@ -261,6 +343,33 @@
             this.pnContents.Name = "pnContents";
             this.pnContents.Size = new System.Drawing.Size(612, 346);
             this.pnContents.TabIndex = 57;
+            // 
+            // btn
+            // 
+            this.btn.BackColor = System.Drawing.SystemColors.Control;
+            this.btn.id = 0;
+            this.btn.image = ((System.Drawing.Image)(resources.GetObject("btn.image")));
+            this.btn.isVisible = false;
+            this.btn.Location = new System.Drawing.Point(79, 3);
+            this.btn.Name = "btn";
+            this.btn.path = "C:\\Windows\\System32\\osk.exe";
+            this.btn.SetText = "Клавиатура";
+            this.btn.Size = new System.Drawing.Size(70, 87);
+            this.btn.TabIndex = 91;
+            // 
+            // btnABOffice
+            // 
+            this.btnABOffice.BackColor = System.Drawing.SystemColors.Control;
+            this.btnABOffice.id = 0;
+            this.btnABOffice.image = global::ABShell.Properties.Resources.aboffice;
+            this.btnABOffice.isVisible = false;
+            this.btnABOffice.Location = new System.Drawing.Point(3, 3);
+            this.btnABOffice.Name = "btnABOffice";
+            this.btnABOffice.path = "C:\\office4\\client\\O4Client.exe";
+            this.btnABOffice.SetText = "АБ ОФИС";
+            this.btnABOffice.Size = new System.Drawing.Size(70, 87);
+            this.btnABOffice.TabIndex = 100;
+            this.btnABOffice.Click += new System.EventHandler(this.standartButt_Click);
             // 
             // addBut
             // 
@@ -358,6 +467,28 @@
             this.button1.TabIndex = 56;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cbUseShell
+            // 
+            this.cbUseShell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbUseShell.Checked = false;
+            this.cbUseShell.Location = new System.Drawing.Point(404, 25);
+            this.cbUseShell.Name = "cbUseShell";
+            this.cbUseShell.SetText = null;
+            this.cbUseShell.Size = new System.Drawing.Size(64, 37);
+            this.cbUseShell.TabIndex = 52;
+            this.cbUseShell.Click += new System.EventHandler(this.cbUseShell_Click);
+            // 
+            // cbUseDisp
+            // 
+            this.cbUseDisp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbUseDisp.Checked = false;
+            this.cbUseDisp.Location = new System.Drawing.Point(180, 25);
+            this.cbUseDisp.Name = "cbUseDisp";
+            this.cbUseDisp.SetText = "";
+            this.cbUseDisp.Size = new System.Drawing.Size(64, 37);
+            this.cbUseDisp.TabIndex = 53;
+            this.cbUseDisp.Click += new System.EventHandler(this.cbUseDisp_Click);
             // 
             // panel2
             // 
@@ -485,134 +616,12 @@
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
             // 
-            // cbUseShell
+            // panel7
             // 
-            this.cbUseShell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbUseShell.Checked = false;
-            this.cbUseShell.Location = new System.Drawing.Point(404, 25);
-            this.cbUseShell.Name = "cbUseShell";
-            this.cbUseShell.SetText = null;
-            this.cbUseShell.Size = new System.Drawing.Size(64, 37);
-            this.cbUseShell.TabIndex = 52;
-            this.cbUseShell.Click += new System.EventHandler(this.cbUseShell_Click);
-            // 
-            // cbUseDisp
-            // 
-            this.cbUseDisp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbUseDisp.Checked = false;
-            this.cbUseDisp.Location = new System.Drawing.Point(180, 25);
-            this.cbUseDisp.Name = "cbUseDisp";
-            this.cbUseDisp.SetText = "";
-            this.cbUseDisp.Size = new System.Drawing.Size(64, 37);
-            this.cbUseDisp.TabIndex = 53;
-            this.cbUseDisp.Click += new System.EventHandler(this.cbUseDisp_Click);
-            // 
-            // btn
-            // 
-            this.btn.BackColor = System.Drawing.SystemColors.Control;
-            this.btn.id = 0;
-            this.btn.image = ((System.Drawing.Image)(resources.GetObject("btn.image")));
-            this.btn.isVisible = false;
-            this.btn.Location = new System.Drawing.Point(79, 3);
-            this.btn.Name = "btn";
-            this.btn.path = "C:\\Windows\\System32\\osk.exe";
-            this.btn.SetText = "Клавиатура";
-            this.btn.Size = new System.Drawing.Size(70, 87);
-            this.btn.TabIndex = 91;
-            // 
-            // btnABOffice
-            // 
-            this.btnABOffice.BackColor = System.Drawing.SystemColors.Control;
-            this.btnABOffice.id = 0;
-            this.btnABOffice.image = global::ABShell.Properties.Resources.aboffice;
-            this.btnABOffice.isVisible = false;
-            this.btnABOffice.Location = new System.Drawing.Point(3, 3);
-            this.btnABOffice.Name = "btnABOffice";
-            this.btnABOffice.path = "C:\\office4\\client\\O4Client.exe";
-            this.btnABOffice.SetText = "АБ ОФИС";
-            this.btnABOffice.Size = new System.Drawing.Size(70, 87);
-            this.btnABOffice.TabIndex = 100;
-            this.btnABOffice.Click += new System.EventHandler(this.standartButt_Click);
-            // 
-            // btnTeamViewer
-            // 
-            this.btnTeamViewer.BackgroundImage = global::ABShell.Properties.Resources.TeamViewer;
-            this.btnTeamViewer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTeamViewer.FlatAppearance.BorderSize = 0;
-            this.btnTeamViewer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeamViewer.id = 95;
-            this.btnTeamViewer.image = global::ABShell.Properties.Resources.TeamViewer;
-            this.btnTeamViewer.isVisible = false;
-            this.btnTeamViewer.Location = new System.Drawing.Point(232, 3);
-            this.btnTeamViewer.login = "";
-            this.btnTeamViewer.Name = "btnTeamViewer";
-            this.btnTeamViewer.password = "";
-            this.btnTeamViewer.path = "";
-            this.btnTeamViewer.server = "";
-            this.btnTeamViewer.Size = new System.Drawing.Size(70, 70);
-            this.btnTeamViewer.TabIndex = 95;
-            this.btnTeamViewer.UseVisualStyleBackColor = true;
-            this.btnTeamViewer.Click += new System.EventHandler(this.button_Click);
-            // 
-            // btAppWiFi
-            // 
-            this.btAppWiFi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btAppWiFi.BackgroundImage")));
-            this.btAppWiFi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btAppWiFi.FlatAppearance.BorderSize = 0;
-            this.btAppWiFi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAppWiFi.id = 5;
-            this.btAppWiFi.image = ((System.Drawing.Image)(resources.GetObject("btAppWiFi.image")));
-            this.btAppWiFi.isVisible = false;
-            this.btAppWiFi.Location = new System.Drawing.Point(4, 3);
-            this.btAppWiFi.login = "";
-            this.btAppWiFi.Name = "btAppWiFi";
-            this.btAppWiFi.password = "";
-            this.btAppWiFi.path = "explorer";
-            this.btAppWiFi.server = "";
-            this.btAppWiFi.Size = new System.Drawing.Size(70, 70);
-            this.btAppWiFi.TabIndex = 92;
-            this.btAppWiFi.UseVisualStyleBackColor = true;
-            this.btAppWiFi.Click += new System.EventHandler(this.btAppWiFi_Click);
-            // 
-            // btnDescktop
-            // 
-            this.btnDescktop.BackgroundImage = global::ABShell.Properties.Resources.system;
-            this.btnDescktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDescktop.FlatAppearance.BorderSize = 0;
-            this.btnDescktop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDescktop.id = 5;
-            this.btnDescktop.image = global::ABShell.Properties.Resources.system;
-            this.btnDescktop.isVisible = false;
-            this.btnDescktop.Location = new System.Drawing.Point(80, 3);
-            this.btnDescktop.login = "";
-            this.btnDescktop.Name = "btnDescktop";
-            this.btnDescktop.password = "";
-            this.btnDescktop.path = "explorer";
-            this.btnDescktop.server = "";
-            this.btnDescktop.Size = new System.Drawing.Size(70, 70);
-            this.btnDescktop.TabIndex = 93;
-            this.btnDescktop.UseVisualStyleBackColor = true;
-            this.btnDescktop.Click += new System.EventHandler(this.btnDescktop_Click);
-            // 
-            // btnPrinters
-            // 
-            this.btnPrinters.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrinters.BackgroundImage")));
-            this.btnPrinters.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPrinters.FlatAppearance.BorderSize = 0;
-            this.btnPrinters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrinters.id = 5;
-            this.btnPrinters.image = ((System.Drawing.Image)(resources.GetObject("btnPrinters.image")));
-            this.btnPrinters.isVisible = false;
-            this.btnPrinters.Location = new System.Drawing.Point(156, 3);
-            this.btnPrinters.login = "";
-            this.btnPrinters.Name = "btnPrinters";
-            this.btnPrinters.password = "";
-            this.btnPrinters.path = "control printers";
-            this.btnPrinters.server = "";
-            this.btnPrinters.Size = new System.Drawing.Size(70, 70);
-            this.btnPrinters.TabIndex = 94;
-            this.btnPrinters.UseVisualStyleBackColor = true;
-            this.btnPrinters.Click += new System.EventHandler(this.btnPrinters_Click);
+            this.panel7.Location = new System.Drawing.Point(12, 86);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(34, 24);
+            this.panel7.TabIndex = 101;
             // 
             // MainForm
             // 
@@ -700,6 +709,7 @@
         private System.Windows.Forms.Label lbCheat;
         private ButtonApp btAppWiFi;
         private UserButton btn;
+        private System.Windows.Forms.Panel panel7;
     }
 }
 
