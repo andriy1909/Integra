@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -107,12 +108,34 @@ namespace ABShell
                             foreach (Wlan.WlanProfileInfo profileInfo in wlanIface.GetProfiles())
                             {
                                 xml = wlanIface.GetProfileXml(profileInfo.profileName);
+                                break;
                             }
-                          //  string profileXml = string.Format(strTemplate, profileName, authentication, encryption, key, hex);
+                            //  string profileXml = string.Format(strTemplate, profileName, authentication, encryption, key, hex);
 
-                            wlanIface.SetProfile(Wlan.WlanProfileFlags.AllUser, xml, true);
-                            wlanIface.Connect(Wlan.WlanConnectionMode.Profile, Wlan.Dot11BssType.Any, profileName);
+                            try
+                            {
+                                wlanIface.SetProfile(Wlan.WlanProfileFlags.AllUser, xml, true);
+                                wlanIface.Connect(Wlan.WlanConnectionMode.Profile, Wlan.Dot11BssType.Any, profileName);
+                            }
+                            catch
+                            {
+                                xml = xml.Replace("<protected>true</protected>", "<protected>false</protected>");
+                                int index = xml.IndexOf("<keyMaterial>") + 13;
+                                xml = xml.Remove(index, xml.IndexOf("</keyMaterial>") - index);
 
+                                InputForm input = new InputForm();
+                                input.TopText = "Введите пароль!";
+                                input.UsePassword = true;
+                                if (input.ShowDialog() != DialogResult.OK)
+                                {
+                                    return;
+                                }
+
+                                xml = xml.Insert(index, input.Value);
+
+                                wlanIface.SetProfile(Wlan.WlanProfileFlags.AllUser, xml, true);
+                                wlanIface.Connect(Wlan.WlanConnectionMode.Profile, Wlan.Dot11BssType.Any, profileName);
+                            }
                             MessageBox.Show("Подключено к "+ profileName);
                             Close();
                             return;                        //string profileXml = string.Format(strTemplate, profileName, authentication, encryption, key);
@@ -126,7 +149,7 @@ namespace ABShell
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка при подключении, подключится возможно только к сети с сохраненным паролем!");
+                MessageBox.Show("Ошибка при подключении!");
             }
         }
 
@@ -156,6 +179,12 @@ namespace ABShell
         private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             btConnect.PerformClick();
+        }
+
+        private void testc()
+        {
+            Process proc = new Process();
+            //proc.
         }
     }
 }
